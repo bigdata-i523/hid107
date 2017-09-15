@@ -8,9 +8,9 @@
 
 ```
 owner:
-    hid: 000
-    name: Gregor von Laszewski
-    url: https://github.com/bigdata-i523/sample-hid000
+    hid: 107
+    name: Ni,Juan
+    url: https://github.com/bigdata-i523/sample-hid107
 ```
 
 # Paper 1
@@ -18,14 +18,14 @@ owner:
 ```
 paper1:
    author: 
-   - Gregor von Laszewski
+   - Ni,Juan
    - Fugang Wang
    hid:
-   - 000
+   - 107
    - 001
    title: This is my paper about xyz
    abstract: This paper showcases tis and that and the other
-   url: https://github.com/bigdata-i523/sample-hid000/paper1/paper1.pdf
+   url: https://github.com/bigdata-i523/sample-hid107/paper1/paper1.pdf
    type: latex
 ```
    
