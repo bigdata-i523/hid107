@@ -7,7 +7,7 @@
 owner:
     hid: 107
     name: Ni,Juan
-    url: https://github.com/bigdata-i523/sample-hid107
+    url: https://github.com/bigdata-i523/hid107
 ```
 
 # Paper 1
