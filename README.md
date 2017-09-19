@@ -16,10 +16,8 @@ owner:
 paper1:
    author: 
    - Ni,Juan
-   - Fugang Wang
    hid:
    - 107
-   - 001
    title: This is my paper about xyz
    abstract: This paper showcases tis and that and the other
    url: https://github.com/bigdata-i523/sample-hid107/paper1/paper1.pdf
@@ -50,7 +48,6 @@ Just use one type and delete the line with
 ```
 paper2:
    type: project
-   type: report
    author: 
    - Gregor von Laszewski
    hid:
