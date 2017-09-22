@@ -1,5 +1,5 @@
 FILE=report
-
+FLAGS=-interaction nonstopmode -halt-on-error -file-line-error
 all:
 	pdflatex ${FILE}
 	bibtex ${FILE}
