@@ -18,11 +18,11 @@ paper1:
    - Ni,Juan
    hid:
    - 107
-   title: This is my paper about xyz
-   abstract: This paper showcases tis and that and the other
+   title: "DevOps in support of Big Data Applications and Analytics"
+   abstract: This paper discuss the relationship between devops and big data applications and analytic. The investigation will focus on cloud platform devops , because the carrier for  most of big data application and analytic is cloud platform. Also, define the difficulty of implement devops is important for designing a big data application.
    url: https://github.com/bigdata-i523/sample-hid107/paper1/paper1.pdf
    type: latex
-   status: in progress
+   status: 100%
    chapter: TBD
 ```
    
