@@ -22,7 +22,7 @@ paper1:
    abstract: This paper discuss the relationship between devops and big data applications and analytic. The investigation will focus on cloud platform devops , because the carrier for  most of big data application and analytic is cloud platform. Also, define the difficulty of implement devops is important for designing a big data application.
    url: https://github.com/bigdata-i523/sample-hid107/paper1/paper1.pdf
    type: latex
-   status: 100%
+   status: 50%
    chapter: Technology
 ```
    
