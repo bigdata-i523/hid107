@@ -15,10 +15,11 @@ paper1:
     chapter: Technology
     hid:
         - 107
-    status: 50%
+    status: Oct 22 1800 100%
     title: DevOps in support of Big Data Applications and Analytics
     type: latex
     url: https://github.com/bigdata-i523/sample-hid107/paper1/paper1.pdf
+    
 paper2:
     abstract: This paper showcases tis and that and the other
     author:
