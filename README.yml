@@ -22,11 +22,12 @@ paper1:
     
 paper2:
     review: Nov 6 2017
-    abstract: This paper showcases tis and that and the other
+    abstract:  NoSQL Databases in support of Big Data Applications and Analytics
     author:
-        - Gregor von Laszewski
+        - Ni,Juan
     hid:
-        - 0
-    title: Benchmarking a BigData Docker deployment
+        - 107
+    title: NoSQL Databases in support of Big Data Applications and Analytics
     type: latex
-    url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf
+    url: https://github.com/bigdata-i523/sample-hid107/paper2/paper2.pdf
+    status: Nov 6 1800 50%
