@@ -22,7 +22,7 @@ paper1:
     
 paper2:
     review: Nov 6 2017
-    abstract:  NoSQL Databases in support of Big Data Applications and Analytics
+    abstract:  SQL database is the most usual database we use, the constitution of sql style database is easy for us to do data storage and search. According to the Artur's testing \cite{test:01}, he using many differences sql and nosql database to testing the insert performance for large amount of data(one million rows of randomized string) in the same time, and nosql databases always has best performance when insert large data. So when we need to deal with big data, SQL database is no longer handy for big data application. Even nosql database doesn't fit into every situation, but the mass data produce ability allow nosql database support most of big data applications and analytic.
     author:
         - Ni,Juan
     hid:
@@ -30,5 +30,5 @@ paper2:
     title: NoSQL Databases in support of Big Data Applications and Analytics
     type: latex
     url: https://github.com/bigdata-i523/sample-hid107/paper2/paper2.pdf
-    status: Nov 6 1800 50%
+    status: 100%
     chapter: Technology
