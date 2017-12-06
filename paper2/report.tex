@@ -1,16 +1,7 @@
-\input{format/i523}
+
 \documentclass[sigconf]{acmart}
 
-\usepackage{hyperref}
-
-\usepackage{endfloat}
-\renewcommand{\efloatseparator}{\mbox{}} % no new page between figures
-
-\usepackage{booktabs} % For formal tables
-
-\settopmatter{printacmref=false} % Removes citation information below abstract
-\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
-\pagestyle{plain} % removes running headers
+\input{format/i523}
 
 \begin{document}
 \title{Nosql Database In Support Of Big Data Applications And Analytics}
@@ -50,7 +41,7 @@ The scalability of nosql database allow user improve their application performan
 Eric Brewer point out the cap theory for distributed system, ``The Availability and Consistency that I mentioned comes, of course, from the misunderstood  CAP theorem, that - so people say states that you can only choose 2 out of the 3
 Consistency: every read would get you the most recent write
 Availability: every node (if not failed) always executes queries
-Partition-tolerance: even if the connections between nodes are down, the other two (A & C) promises, are kept. '' \cite{compare:04}.  This theory represent that a distributed system can not satisfied consistency, availability, and partition-tolerance in the same time. For sql database,``ACID (an acronym for Atomicity, Consistency Isolation, Durability) is a concept that Database Professionals generally look for when evaluating databases and application architectures. For a reliable database all these four attributes should be achieved.'' \cite{compare:05}, the ACID theory for SQL database is seems like making sql database more reliable than nosql database. But reliable is the contradiction of performance, which mean if the business become more complicated, the performance of sql database will be decrease. 
+Partition-tolerance: even if the connections between nodes are down, the other two (A \& C) promises, are kept. '' \cite{compare:04}.  This theory represent that a distributed system can not satisfied consistency, availability, and partition-tolerance in the same time. For sql database,``ACID (an acronym for Atomicity, Consistency Isolation, Durability) is a concept that Database Professionals generally look for when evaluating databases and application architectures. For a reliable database all these four attributes should be achieved.'' \cite{compare:05}, the ACID theory for SQL database is seems like making sql database more reliable than nosql database. But reliable is the contradiction of performance, which mean if the business become more complicated, the performance of sql database will be decrease. 
 
 
 \section{The advantage of using Nosql database for big data applications}
