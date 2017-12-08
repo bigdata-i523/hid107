@@ -1,0 +1,70 @@
+
+\documentclass[sigconf]{acmart}
+
+\input{format/i523}
+
+\begin{document}
+\title{Nosql Database In Support Of Big Data Applications And Analytics}
+
+
+\author{Juan Ni}
+\affiliation{%
+  \city{Bloomington} 
+  \state{Indiana} 
+  \postcode{47401}
+}
+\email{nijuan@iu.edu}
+
+
+
+
+\begin{abstract}
+SQL database is the most usual database we use, the constitution of sql style database is easy for us to do data storage and search. According to the Artur's testing \cite{test:01}, he using many differences sql and nosql database to testing the insert performance for large amount of data(one million rows of randomized string) in the same time, and nosql databases always has best performance when insert large data. So when we need to deal with big data, SQL database is no longer handy for big data application. Even nosql database doesn't fit into every situation, but the mass data produce ability allow nosql database support most of big data applications and analytic.
+\end{abstract}
+
+\keywords{523, HID 107, paper2, big data, database, SQL, NoSQL}
+
+
+\maketitle
+
+\section{Introduction}
+
+SQL and NosQL database have same goal which is to storage data, but they have different strategy about storage data by difference storage mode. As we know, SQL database using tables to storage data, the primary key and foreign key allow user making connection between several different tables. Table type storage mode is well organize, but it is less flexibly for some situation. For example we have a table which content two columns ``Item''and``price'', and one item's price still negotiate with the retail, so we want to put ``Processing'' at the price area; but the price area already set up only allow user import number data, so user can't make any flexible change to import data into table for meet the business need. Unlike SQL database only have one type of storage model, nosql database have four differences storage model based on the data categories, they are ``Column, Document, Key value, and Graph''\cite{wiki:01}. For example, nosql using key value which similar to JOSN to storage data, user can import any type of data inside the file, and the same type of file will storage as a collection. According to the nosql storage definition, the main differences of storage model between sql and nosql database is ``Compared to relational databases, for example, collections could be considered analogous to tables and documents analogous to records. But they are different: every record in a table has the same sequence of fields, while documents in a collection may have fields that are completely different.'' \cite{wiki:01}. Nosql supporting variable types of data storage, this advantage make nosql more suitable for big data application. The following section will discuss why nosql database have better performance for big data applications than traditional sql database, the advantage and drawback of nosql database.
+ 
+\section{MySql database VS Nosql database}
+The above examples show that nosql database is much better than SQL database, but nosql database still has shortage at some domain compare with sql database. For example, the formatting of the table in SQL database has really strict data schema constraint, user only can import data by following the rule that already set up in the table, and this make sql database steady and rarely have error at data storage. The flexibility of nosql data storage might cause error happen according to jepsen's idea, ``In this post, we'll see that Mongo's consistency model is broken by design: not only can "strictly consistent" reads see stale versions of documents, but they can also return garbage data from writes that never should have occurred. The former is (as far as I know) a new result which runs contrary to all of Mongo's consistency documentation. The latter has been a documented issue in Mongo for some time. We'll also touch on a result from the previous Jepsen post: almost all write concern levels allow data loss.'' \cite{compare:02}. Even the reliability of nosql is not good enough as sql, but nosql still better for big data application because of its cost-performance, Scalability, and CAP(Consistency-Availability-Partition Tolerance). 
+
+Cost-performance is important when dealing with big data because the storage cost can be huge if using sql database to storage large amount of data. Dezyre mention that ``RDBMS requires a higher degree of Normalization i.e. data needs to be broken down into several small logical tables to avoid data redundancy and duplication'' \cite{compare：01}, even normalization can meke database become well organized, but the cost of normalization will be huge if the data type and amount is huge. Nosql using collection to storage data which allow user using less time to import and search data, no need to classify the type of each file in nosql database. 
+
+The scalability of nosql database allow user improve their application performance and response speed, according to dezyre's idea ``NoSQL Databases like the HBase, Couchbase and MongoD, scale horizontally with the addition ofextra nodes (commodity database servers) to the resource pool, so that the load can be distributed easily. '' \cite{compare：01};the tables in sql database have relatedness, so we usually need to use join function to select data, so every data for one application must to be in the same server. The files in nosql have no relatedness, so storage the data in different server is feasible for nosql, then when the application growth require more servers to support, nosql database can simply adding servers to meet the business growth need. 
+
+Eric Brewer point out the cap theory for distributed system, ``The Availability and Consistency that I mentioned comes, of course, from the misunderstood  CAP theorem, that - so people say states that you can only choose 2 out of the 3
+Consistency: every read would get you the most recent write
+Availability: every node (if not failed) always executes queries
+Partition-tolerance: even if the connections between nodes are down, the other two (A \& C) promises, are kept. '' \cite{compare:04}.  This theory represent that a distributed system can not satisfied consistency, availability, and partition-tolerance in the same time. For sql database,``ACID (an acronym for Atomicity, Consistency Isolation, Durability) is a concept that Database Professionals generally look for when evaluating databases and application architectures. For a reliable database all these four attributes should be achieved.'' \cite{compare:05}, the ACID theory for SQL database is seems like making sql database more reliable than nosql database. But reliable is the contradiction of performance, which mean if the business become more complicated, the performance of sql database will be decrease. 
+
+
+\section{The advantage of using Nosql database for big data applications}
+There are three main advantages of using nosql database for big data application, flexible data model, high scalability, high performance. The data model in nosql database is flexible, user don't need to set up the file property at the beginning and custom the data storage formatting at anytime\cite{adv:3}. For example, if our big data analysis application is getting data from the third party platform like face book, the data from the third party platform is multifarious like target user information, physical and  social graph. So the flexible data model allow application collect multifarious kind of data without bother the type of data which going to collect advance. When collecting new kind of data, nosql no need edit the table or create a new column which allow the developer focus more on the analysis area instead of modify the collecting data type. 
+
+High scalability can save huge cost for upgrade the database to meet the business need. The extend model for sql database is scale up, which mean if the user is increasing, we need to have better server for satisfy the new usage \cite{adv:2}. Better server need better CPU, hard disk, and ram to content all the table, this make the upgrade become super expensive. In the other side, the upgrade method for nosql is much economic. At previous section, I mention that the data storage in nosql is distributed, so the upgrade method for nosql database is horizontally expanded. For fit the increasing of data storage, we just need to add new server which has exactly same spec or even lower spec, because we don't need to put all the data into one server. Cassandra is one of the best example, the architecture of cassandra is similar to p2p model, so we can simply add new node to expend the cluster \cite{adv:1}. Therefore the scalability of nosql make upgrade much more easier and cheaper for big data application.
+
+Nosql have really high performance in reading and update data because of the data model of nosql is simply and no relational. According to the Penchikala's article \cite{adv:05}, Sql using Query Cache, so the cache will lose efficacy when every time update the cache, so this kind of cache have lowe performance; The Cache of nosql is recording level which have much higher performance.
+
+
+\section{Conclusions}
+The limitation of traditional sql database no longer can meet the demand of big data applicaiton, because the performance of sql database to deal large amount of data is lower. Under the mass data application environment, nosql has more agility to deploy new model on big data application, and the expand of nosql database is easier and cheap compare with sql database.
+
+\section{Acknowledgement}
+
+I would like to  take this chance to thanks to my tutor Miao, in process on reviewing my paper, he gave me many useful comments and advises. At the same time, I would like to thanks my instructor laszewsk, give me useful knowledge about how to write a report on Latex format. Finally, I would love to thanks my friends who working for Microsoft  give me many idea about my nosql database.
+
+
+
+
+
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{report} 
+
+\end{document}
