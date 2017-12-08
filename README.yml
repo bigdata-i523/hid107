@@ -39,10 +39,8 @@ project:
     hid:
         - 107
     title: null
-    abstract: >
-        We showcase tis and that and the other
-        and another line.
-    url: https://github.com/bigdata-i523/sample-hid000/project/
+    abstract: In an era of information, people are more likely to get information from the ciber world.  Due to the conflict of interest,  many organizations hire  ``Spammers'' to post a mass of wrong comments under some famous person's post on Social Networking Sites for control the trend of public opinion\cite{abs:01}. So when user want to see the public opinion under some famous person's post, they usually get the wrong information which doesn't represent the real public opinion. Big Data analytic can provide information filtering to screening the fake comment based on data mining technique, and let the user be able to see the true of public opinion on social networking sites.
+    url: https://github.com/bigdata-i523/sample-hid107/project/project.pdf
     type: project
-    status: Dec 04 17 0%
-chapter: TBD
+    status: Dec 08 0600 100%
+chapter: Technology
