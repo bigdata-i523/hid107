@@ -39,10 +39,11 @@ The other reason why spammers getting so popular at social networking website is
 
 \section{Background}
 According to the worldwide statistics data, "Sina Weibo" has 368 millions active users which more than 328 millions of twitter active user \cite{target：01} , so I would like to using "Sina Weibo" as my investigate target instead of using Twitter. The other reason why I choose  "Sina Weibo" as my investigate target is because I'm familiar with Chinese culture and I have been using  "Sina Weibo" for more than 8 years. I think my knowledge about  "Sina Weibo" will help me a lot at this project and better understand how spammers works at "weibo". The page frame at "weibo" is pretty similar to Twitter [figure1]. 
-
+\begin{figure}[h]
 \includegraphics[width=6cm, height=4cm]{1.jpg}
+\end{figure}
 
-            figure1
+
             
 The four buttons under each feed are "collect, retweet, reply, like", and the capability for each button is same as twitter. When user click into the "rely" button, user can see all the comments related to the current feed, and sort them by the amount of "like" that comments get from other user. The only things differen at "weibo" is user not only can see the comments but also can see the retweet information, twitter only allow user to see who retweet the feed. Then user can see the retweet's comments and sort the list by the retweet's times of the retweet feed. So people would love to check the retweet list to see which famous person retweet the feed, and what comment they put into the retweet.Spammer control the public opinion trends by putting wrong information that doesn't represent real public opinion into the comment for some hot feed, they utilize user's habit to reach their goal. 
 
@@ -68,24 +69,30 @@ Once we get the feed's id, we can use this id to allocate the target feed at API
 
 The last step for collecting data is to storage the target data as txt file. All the data that related to comment are saved into the variable now, so if we want to get our target return object from this data set, we need to use the special code for different kind of category inside this data set; Weibo also provide a specific instruction for the code of return object \cite{method:07}. The data we need for wrong information filtration are the content of comments and the user information for each comments, the numbers of follower and the number of friends for the user who post the comments, also we need to get the number of feed that post from the user who comments the feed. Then use special code "follower\_count", "FRIENDS\_count", and "statuses\_count" to get those information, and save them into the txt file for next step data viualization. The reason why I save my target date into txt file because of the coding knowledge shortage, I don't know how to using the data analysis model at 2.7 python version, so I decide to using Python 2.7 to collecting data and using python  3.5 to do the data analysis.
 
-\subsection{Data visualization ``'' }
+\subsection{Data visualization}
 The data visualization in this paper will be simple and straight forward, because of even I have some idea to analysis the data, but I can not represent it due to coding knowledge shortage. The models I decide to use for this data visualization are matplotlib, nltk, worldcloud, pandas, numpy, jieba and codecs. First, open the content.txt file at python and using readlines and appends to create a list that content all the comments. I intend to use worldcloud to visualize the words that has most frequence on the comment list, and I find out the worldcloud don't support chineses really well, so I use the module "jieba" to reproduce the comments list. Jieba is the best module to support Word Segmentation, wen can using this module to pick up the words which most frequently appear at the comment list\cite{method:08}. I using FontTian's formatting as my main structure of jieba code  \cite{method:08}, also we can add some new word into our word list and use it to make the jieb module can be able to indentity the new world, and we use "stopwords\_path" to filter the common word like "hello", and the we are using outside txt source which is Chinese vocabulary words out file as our stop word dictionary \cite{method:10}. And during using this stop word file inside the jieba code, we have to encoding the file to "utf8" formatting, otherwise it will have some error that the jieba module can not distinguish the content inside the stop word file; also we need to set up the right font for the wordcloud by using the ttc file from the fonts document on the computer, if the font use on wordcloud doesn't support chinese, the final result will be a retangle for each word instand of actually Chinese. 
 
 The first outcome I got from the word cloud is look like this:
+\begin{figure}[h]
 \includegraphics[width=7cm, height=4cm]{2.jpg}
+\end{figure}
 So now people can really quick have a pretty idea that what is the main trend of the comments, and what is all the comment talking about. But we can still find some noise inside the plt, like ``回复'' which mean reply， it doesn't contain any meaning, so we can add this word to our stop words list, then we try to create world cloud again, the new plot is look like this:
-
+\begin{figure}[h]
 \includegraphics[width=7cm, height=4cm]{3.jpg}
+\end{figure}
 It seems more meaniful than before, and contain more information than before. So we can see that their lot of words like ``回复'' inside the comments data is useless, then we can add those world into our stop words list to rip it up. Also we can use this method to filter the spammer's information, so the uesr can see the true information from the world cloud.
 
 Then for detecting the spammer, analysis the user who post the comments is very important. To visualize the user data, using readlines to open the each txt file, and using solit and strip to reproduce the data formatting. Then putting all the data into the dataframe via pandas modules. When I look at the data type in dataframe, I found out that the data type inside the dataframe for each catory is not number, then I use astype to change the data type to number for calculator. Here is the three histograms I plot out for the the Feeds, Friends, and followers data: 
 
+\begin{figure}[h]
 \includegraphics[width=7cm, height=4cm]{4.jpg}
-
+\end{figure}
+\begin{figure}[h]
 \includegraphics[width=7cm, height=4cm]{5.jpg}
-
+\end{figure}
+\begin{figure}[h]
 \includegraphics[width=7cm, height=4cm]{6.jpg}
-
+\end{figure}
 The result is pretty interesting and surprise for me. The data represent those three histograms are pretty obviously, even the number of my sample is only 200 comments because of the limitation of weibo API. We can see that all the histograms are right-skewed distribution, according to the definition of histogram, the mean at right skewed distribution is the peak of the right side \cite{method:10}. It doesn't look like normal because of the curve is not bell shape, if this data is from the real commets which mean post by the actual user not spammer, the curve of this three histograms will looks like normal distribution. The peal of those three histograms show us the majority of those three elements, for the number of friends, the majority is between 0 to 250; for the majority of feeds is between 0 to 1800, and the majority for followers is between 0 to 200. we can see most majority are fall into the first interval, which mean it represent the friends, followers, and feed from the accounts I pick are pretty much same type of fake account. So it is pretty luck that I can dig out so much spammer account with small number of simple, so there no doubt that their are lot of spammers involve into this feed's comment because the comments post by the majority accounts are pretty much same type of account.
 
 
