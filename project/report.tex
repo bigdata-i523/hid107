@@ -40,7 +40,7 @@ The other reason why spammers getting so popular at social networking website is
 \section{Background}
 According to the worldwide statistics data, "Sina Weibo" has 368 millions active users which more than 328 millions of twitter active user \cite{target：01} , so I would like to using "Sina Weibo" as my investigate target instead of using Twitter. The other reason why I choose  "Sina Weibo" as my investigate target is because I'm familiar with Chinese culture and I have been using  "Sina Weibo" for more than 8 years. I think my knowledge about  "Sina Weibo" will help me a lot at this project and better understand how spammers works at "weibo". The page frame at "weibo" is pretty similar to Twitter [figure1]. 
 \begin{figure}[h]
-\includegraphics[width=6cm, height=4cm]{1.jpg}
+\includegraphics[width=\columnwidth]{1.jpg}
 \end{figure}
 
 
@@ -74,24 +74,24 @@ The data visualization in this paper will be simple and straight forward, becaus
 
 The first outcome I got from the word cloud is look like this:
 \begin{figure}[h]
-\includegraphics[width=7cm, height=4cm]{2.jpg}
+\includegraphics[width=\columnwidth]{2.jpg}
 \end{figure}
 So now people can really quick have a pretty idea that what is the main trend of the comments, and what is all the comment talking about. But we can still find some noise inside the plt, like ``回复'' which mean reply， it doesn't contain any meaning, so we can add this word to our stop words list, then we try to create world cloud again, the new plot is look like this:
 \begin{figure}[h]
-\includegraphics[width=7cm, height=4cm]{3.jpg}
+\includegraphics[width=\columnwidth]{3.jpg}
 \end{figure}
 It seems more meaniful than before, and contain more information than before. So we can see that their lot of words like ``回复'' inside the comments data is useless, then we can add those world into our stop words list to rip it up. Also we can use this method to filter the spammer's information, so the uesr can see the true information from the world cloud.
 
 Then for detecting the spammer, analysis the user who post the comments is very important. To visualize the user data, using readlines to open the each txt file, and using solit and strip to reproduce the data formatting. Then putting all the data into the dataframe via pandas modules. When I look at the data type in dataframe, I found out that the data type inside the dataframe for each catory is not number, then I use astype to change the data type to number for calculator. Here is the three histograms I plot out for the the Feeds, Friends, and followers data: 
 
 \begin{figure}[h]
-\includegraphics[width=7cm, height=4cm]{4.jpg}
+\includegraphics[width=\columnwidth]{4.jpg}
 \end{figure}
 \begin{figure}[h]
-\includegraphics[width=7cm, height=4cm]{5.jpg}
+\includegraphics[width=\columnwidth]{5.jpg}
 \end{figure}
 \begin{figure}[h]
-\includegraphics[width=7cm, height=4cm]{6.jpg}
+\includegraphics[width=\columnwidth]{6.jpg}
 \end{figure}
 The result is pretty interesting and surprise for me. The data represent those three histograms are pretty obviously, even the number of my sample is only 200 comments because of the limitation of weibo API. We can see that all the histograms are right-skewed distribution, according to the definition of histogram, the mean at right skewed distribution is the peak of the right side \cite{method:10}. It doesn't look like normal because of the curve is not bell shape, if this data is from the real commets which mean post by the actual user not spammer, the curve of this three histograms will looks like normal distribution. The peal of those three histograms show us the majority of those three elements, for the number of friends, the majority is between 0 to 250; for the majority of feeds is between 0 to 1800, and the majority for followers is between 0 to 200. we can see most majority are fall into the first interval, which mean it represent the friends, followers, and feed from the accounts I pick are pretty much same type of fake account. So it is pretty luck that I can dig out so much spammer account with small number of simple, so there no doubt that their are lot of spammers involve into this feed's comment because the comments post by the majority accounts are pretty much same type of account.
 
