@@ -17,7 +17,6 @@ paper1:
         - 107
     status: Oct 22 1800 100%
     title: DevOps in support of Big Data Applications and Analytics
-    type: latex
     url: https://github.com/bigdata-i523/sample-hid107/paper1/paper1.pdf
     
 paper2:
@@ -28,7 +27,6 @@ paper2:
     hid:
         - 107
     title: NoSQL Databases in support of Big Data Applications and Analytics
-    type: latex
     url: https://github.com/bigdata-i523/sample-hid107/paper2/paper2.pdf
     status: 100%
     chapter: Technology
